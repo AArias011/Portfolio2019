@@ -1,80 +1,100 @@
 @charset "utf-8";
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: 'Economica', sans-serif;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
-
-
-
 
 /* NAVIGATION STYLES */
 /* This puts the nav on top of the image */
-.hnav{
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    width: 40%;    
-    list-style-type: none;
+.hnav {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  width: 40%;
+  list-style-type: none;
 }
-.name{
-    position: absolute;
+.name {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: whitesmoke;
   font-size: 65px;
+}
+#nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 19.5px;
+  text-align: center;
+}
+#nav li {
+  display: block;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.line::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.5s;
+}
+
+.line:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+/* 1st ARTICLE STYLES */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  padding-bottom: 80px;
   
 }
-#nav a{
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 19.5px;
+
+.container > div {
+  padding: 1em;
+  text-align: center;
+  /* border-radius: 10px; */
+  background-color: rgba(255, 255, 255, 0.87);
+  font-size: 19px;
+  margin-top: 10px;
+
+}
+
+h1{
     text-align: center;
+    font-size: 50px;
 }
-#nav li{
-    display: block;
-    width: 25%;
-    float: left;
-    text-align: center;
+.firstArticle{
+    background-color: #db5f17a4;
+    
 }
-
-.line::after{
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: #fff;
-    transition: width .5s;
-}
-
-.line:hover::after{
-    width:100%;
-    transition: width .5s;
-}
-
-/* ARTICLE STYLES */
-.container{
+/* 2nd ARTICLE STYLES */
+.container2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     grid-column-gap: 5px;
-    /* width: 50%; */
 }
-
-.container > div{
-    padding:1em;
+.container2 > div {
+    padding: 1em;
     text-align: center;
-    border-radius:10px;
+    border-radius: 10px;
     background-color: rgba(88, 130, 247, 0.37);
-    font-size: 20px;
+    font-size: 19px;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
+  
+  }
